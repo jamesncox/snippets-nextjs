@@ -15,7 +15,7 @@ export default function Home() {
             <main className="">
                 <div className="my-12">
                     <h1 className="text-red-100 text-2xl">
-                        Errday Code Snippets
+                        Code Snippets
                     </h1>
                     <p className="text-red-200">
                         Create and browse snippets you use every day in Web
