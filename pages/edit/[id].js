@@ -20,7 +20,8 @@ export default function Home({ snippet }) {
 
 export async function getServerSideProps(context) {
     try {
-        //TODO: Get and return snippet as prop
+        const id = context.params.id
+        
         return {
             props: {},
         };
