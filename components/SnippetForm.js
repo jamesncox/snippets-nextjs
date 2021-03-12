@@ -4,7 +4,14 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 export default function SnippetForm({ snippet }) {
     //TODO: configure react hook form
-    const { register, handleSubmit, errors } = useForm()
+    const { register, handleSubmit, errors } = useForm({
+        defaultValues: {
+            code: snippet ? snippet.data.code : '',
+            language: snippet ? snippet.data.language : '',
+            description: snippet ? snippet.data.description : '',
+            name: snippet ? snippet.data.name : '',
+        }
+    })
 
     const router = useRouter();
 
