@@ -35,6 +35,13 @@ export default function SnippetForm({ snippet }) {
         const { code, language, description, name } = data;
         const id = snippet.id;
         try {
+            await fetch('/api/updateSnippet', {
+                method: 'PUT',
+                body: JSON.stringify({ code, language, description, name }),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
             router.push('/');
         } catch (err) {
             console.error(err);
