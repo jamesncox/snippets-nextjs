@@ -86,6 +86,9 @@ export default function SnippetForm({ snippet }) {
                     <option className="py-1">HTML</option>
                     <option className="py-1">CSS</option>
                 </select>
+                {errors.language && (
+                    <p className="font-bold text-red-900">Language is required</p>
+                )}
             </div>
             <div className="mb-4">
                 <label
