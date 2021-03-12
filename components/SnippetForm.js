@@ -28,7 +28,6 @@ export default function SnippetForm({ snippet }) {
         const { code, language, description, name } = data;
         const id = snippet.id;
         try {
-            //TODO: updarte snippet
             router.push('/');
         } catch (err) {
             console.error(err);
