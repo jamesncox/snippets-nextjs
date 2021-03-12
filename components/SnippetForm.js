@@ -37,17 +37,17 @@ export default function SnippetForm({ snippet }) {
         try {
             await fetch('/api/updateSnippet', {
                 method: 'PUT',
-                body: JSON.stringify({ code, language, description, name }),
+                body: JSON.stringify({ code, language, description, name, id }),
                 headers: {
                     'Content-Type': 'application/json',
                 },
-            })
+            });
             router.push('/');
         } catch (err) {
             console.error(err);
         }
     };
-    //TODO: register inputs and add error messages
+
     return (
         //TODO: wrap with handleSubmit from react-hook-form
         <form onSubmit={handleSubmit(snippet ? updateSnippet : createSnippet)}>
